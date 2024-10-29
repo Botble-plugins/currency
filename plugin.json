@@ -5,7 +5,7 @@
     "provider": "Botble\\Currency\\Providers\\CurrencyServiceProvider",
     "author": "Omar Adel",
     "url": "https://github.com/Botble-plugins",
-    "version": "1.1.0",
+    "version": "1.0.0",
     "description": "manage Multiple currencies in your website.",
     "minimum_core_version": "7.3.5"
 }
