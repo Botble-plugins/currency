@@ -52,8 +52,14 @@ class CurrencyServiceProvider extends ServiceProvider
             return $assets;
         });
 
+        
         add_filter(BASE_FILTER_TOP_HEADER_LAYOUT, function ($options){
-            return $options.view('plugins/currency::layouts.header.currency');
+            if(count(get_all_currencies()) > 0 )
+            {
+                return $options.view('plugins/currency::layouts.header.currency');
+            }
+
+            return $options;
         });
 
         add_filter(BASE_FILTER_FOOTER_LAYOUT_TEMPLATE, function ($assets) {
