@@ -11,7 +11,7 @@ use Botble\Base\Models\BaseModel;
  */
 class Currency extends BaseModel
 {
-    protected $table = 'algoriza_currencies';
+    protected $table = 'cms_currencies';
 
     protected $fillable = [
         'title',

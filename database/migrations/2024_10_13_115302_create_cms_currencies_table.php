@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        if(!Schema::hasTable('algoriza_currencies'))
+        if(!Schema::hasTable('cms_currencies'))
         {
-            Schema::create('algoriza_currencies', function (Blueprint $table) {
+            Schema::create('cms_currencies', function (Blueprint $table) {
                 $table->id();
                 $table->string('title');
                 $table->string('symbol', 10);
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('algoriza_currencies');
+        Schema::dropIfExists('cms_currencies');
     }
 };
