@@ -37,7 +37,7 @@ class CurrencyServiceProvider extends ServiceProvider
         PanelSectionManager::default()->beforeRendering(function () {
             PanelSectionManager::registerItem(
                 SettingCommonPanelSection::class,
-                fn () => PanelSectionItem::make('algoriza-currencies')
+                fn () => PanelSectionItem::make('omarbotble-currencies')
                     ->setTitle(trans('plugins/currency::currency.currencies'))
                     ->withDescription(trans('plugins/currency::currency.setting_description'))
                     ->withIcon('ti ti-list-details')

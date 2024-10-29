@@ -1,11 +1,11 @@
 {
-    "id": "algoriza/currency",
+    "id": "omarbotble/currency",
     "name": "Currency",
     "namespace": "Botble\\Currency\\",
     "provider": "Botble\\Currency\\Providers\\CurrencyServiceProvider",
-    "author": "Algoriza/Omar",
+    "author": "Omar Adel",
     "url": "",
     "version": "1.0.0",
-    "description": "algoriza plugin for manage currencies",
+    "description": "manage Multiple currencies in your website.",
     "minimum_core_version": "7.3.5"
 }

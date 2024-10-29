@@ -14,7 +14,7 @@ Route::group(['namespace' => 'Botble\Currency\Http\Controllers\Settings'], funct
             Route::put('currencies', [
                 'as' => 'settings.currencies.update',
                 'uses' => 'CurrencyController@update',
-                'permission' => 'algoriza.currency.currencies',
+                'permission' => 'omarbotble.currency.currencies',
             ]);
         });
     });

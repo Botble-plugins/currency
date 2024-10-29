@@ -3,21 +3,21 @@
 return [
     [
         'name' => 'Currencies',
-        'flag' => 'algoriza.currency.index',
+        'flag' => 'omarbotble.currency.index',
     ],
     [
         'name' => 'Create',
-        'flag' => 'algoriza.currency.create',
-        'parent_flag' => 'algoriza.currency.index',
+        'flag' => 'omarbotble.currency.create',
+        'parent_flag' => 'omarbotble.currency.index',
     ],
     [
         'name' => 'Edit',
-        'flag' => 'algoriza.currency.edit',
-        'parent_flag' => 'algoriza.currency.index',
+        'flag' => 'omarbotble.currency.edit',
+        'parent_flag' => 'omarbotble.currency.index',
     ],
     [
         'name' => 'Delete',
-        'flag' => 'algoriza.currency.destroy',
-        'parent_flag' => 'algoriza.currency.index',
+        'flag' => 'omarbotble.currency.destroy',
+        'parent_flag' => 'omarbotble.currency.index',
     ],
 ];
