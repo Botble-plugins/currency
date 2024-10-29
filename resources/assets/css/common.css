@@ -1,0 +1,42 @@
+
+.toast-success {
+    background-color: #4CAF50; /* Green */
+    color: white; /* Text color */
+}
+
+.toast-warning {
+    background-color: #FFC107; /* Yellow */
+    color: white; /* Text color */
+}
+
+.toast-error {
+    background-color: #dc3545; /* Red */
+    color: white; /* Text color */
+}
+
+.toast-info {
+    background-color: #17a2b8 !important; /* Light blue */
+    color: #ffffff; /* White text */
+}
+
+.toast-error {
+    background-color: #dc3545 !important; /* Red */
+    color: #ffffff; /* White text */
+}
+
+.toast {
+    transition: all 0.5s ease;
+}
+
+.toast:hover {
+    transform: translateY(-5px); /* Lift on hover */
+}
+
+.toast-close-button {
+    color: #fff; /* Change close button color */
+    opacity: 0.8; /* Slightly transparent */
+}
+
+.toast-close-button:hover {
+    opacity: 1; /* Fully opaque on hover */
+}

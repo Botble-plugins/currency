@@ -2,6 +2,7 @@
 
 namespace Botble\Currency\Providers;
 
+use Botble\Base\Facades\Html;
 use Botble\Base\Facades\PanelSectionManager;
 use Botble\Base\Supports\ServiceProvider;
 use Botble\Base\Traits\LoadAndPublishDataTrait;
@@ -37,7 +38,7 @@ class CurrencyServiceProvider extends ServiceProvider
         PanelSectionManager::default()->beforeRendering(function () {
             PanelSectionManager::registerItem(
                 SettingCommonPanelSection::class,
-                fn () => PanelSectionItem::make('omarbotble-currencies')
+                fn () => PanelSectionItem::make('algoriza-currencies')
                     ->setTitle(trans('plugins/currency::currency.currencies'))
                     ->withDescription(trans('plugins/currency::currency.setting_description'))
                     ->withIcon('ti ti-list-details')
@@ -46,8 +47,18 @@ class CurrencyServiceProvider extends ServiceProvider
             );
         });
 
+        add_filter(BASE_FILTER_HEADER_LAYOUT_TEMPLATE, function ($assets) {
+            $assets .= Html::style('vendor/core/plugins/currency/css/common.css');
+            return $assets;
+        });
+
         add_filter(BASE_FILTER_TOP_HEADER_LAYOUT, function ($options){
             return $options.view('plugins/currency::layouts.header.currency');
-        },100);
+        });
+
+        add_filter(BASE_FILTER_FOOTER_LAYOUT_TEMPLATE, function ($assets) {
+            $assets .= Html::script('vendor/core/plugins/currency/js/common.js', ['defer']);
+            return $assets;
+        });
     }
 }

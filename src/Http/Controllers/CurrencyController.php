@@ -34,12 +34,13 @@ class CurrencyController extends BaseController
                 ->setData(CurrencyApiResource::collection($currencies))->toApiResponse();
     }
 
-    public function updateDefault(Currency $currency, CurrencyService $currencyService)
+    public function updateDefault(Request $request, CurrencyService $currencyService)
     {
-        $currencyService->updateDefault($currency);
+        $currencyService->updateDefault($request->currency);
 
         return $this
                 ->httpResponse()
-                ->setMessage(trans('core/base::notices.update_success_message'));
+                ->setMessage(trans('core/base::notices.update_success_message'))
+                ->toApiResponse();
     }
 }

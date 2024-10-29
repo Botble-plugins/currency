@@ -7,10 +7,13 @@ class CurrencyService
     public function __construct(public Currency $currency)
     {}
 
-    public function updateDefault(Currency $currency)
+    public function updateDefault(int|string $currencyId)
     {
-        $this->currency->query()->update(['default' => 0]);
+        $this->currency
+                ->query()
+                ->update(['is_default' => 0]);
 
+        $currency = $this->currency->find($currencyId);
         $currency->is_default = 1;
         return $currency->save();
     }
