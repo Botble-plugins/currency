@@ -1,4 +1,4 @@
-# Turnstile
+# Currency
 
 A plugin enable you to manage multiple currencies in your website.
 
@@ -37,7 +37,7 @@ If you discover any security related issues, please email omar.adel.omar818@gmai
 
 ## Credits
 
-* [Friends Of Botble](https://github.com/Botble-plugins)
+* [Botble Plugins](https://github.com/Botble-plugins)
 * [All Contributors](../../contributors)
 
 ## License
